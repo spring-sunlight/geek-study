@@ -1,4 +1,4 @@
-package third_week
+package second_week
 
 import "sort"
 

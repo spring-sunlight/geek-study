@@ -1,4 +1,4 @@
-package fifth_lesson
+package forth_week
 
 import "math"
 

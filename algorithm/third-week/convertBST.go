@@ -1,4 +1,4 @@
-package forth_week
+package third_week
 
 type TreeNode struct {
 	Val   int
