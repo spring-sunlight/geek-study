@@ -1,4 +1,4 @@
-package third_week
+package forth_week
 
 var n, m int
 
