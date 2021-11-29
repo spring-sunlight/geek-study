@@ -1,6 +1,9 @@
 package common
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 type ListNode struct {
 	Val  int
@@ -22,14 +25,24 @@ func NewListNode(val int, next *ListNode) *ListNode {
 	return &ListNode{Val: val, Next: next}
 }
 
-func PrintListNode(node *ListNode) {
+func PrintListNode(node *ListNode, name ...string) {
 	counter := 0
+	str := ""
+	if len(name) == 0 {
+		name = append(name, " ")
+	}
 	for node != nil {
-		fmt.Println(node.Val)
+		str += strconv.Itoa(node.Val) + "->"
 		node = node.Next
 		counter++
 		if counter > 20 {
-			return
+			break
 		}
 	}
+	if str != "" {
+		fmt.Println("链表", name[0], "为: "+str[:len(str)-2])
+	} else {
+		fmt.Println("当前链表为nil ")
+	}
+
 }

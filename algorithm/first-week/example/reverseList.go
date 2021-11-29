@@ -33,22 +33,23 @@ func reverseList(head *common.ListNode) *common.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	cur := head
-	next := head.Next
-	common.PrintListNode(head)
+
+	common.PrintListNode(head, "初始值")
 	fmt.Println("--------------")
-	for next != nil {
-		cur.Next = next.Next
-		next.Next = head
-		head = next
-		next = cur.Next
-		common.PrintListNode(head)
+	var pre, nextHead *common.ListNode
+
+	for head != nil {
+		nextHead = head.Next
+		head.Next = pre
+		pre = head
+		head = nextHead
+		common.PrintListNode(pre)
 		fmt.Println("--------------")
 	}
-	return head
+	return pre
 }
 
-func testReverseList() {
+func TestReverseList() {
 	L := common.NewList(1, 2, 3, 4, 5)
 	common.PrintListNode(reverseList(L))
 }
