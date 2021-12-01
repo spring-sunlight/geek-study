@@ -1,4 +1,4 @@
-package example
+package example_list
 
 func detectCycle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

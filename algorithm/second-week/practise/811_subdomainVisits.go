@@ -1,4 +1,4 @@
-package second_week
+package practise
 
 import (
 	"strconv"

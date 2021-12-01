@@ -1,4 +1,4 @@
-package second_week
+package practise
 
 func findShortestSubArray(nums []int) int {
 	m := make(map[int][]int)

@@ -1,4 +1,4 @@
-package example
+package example_stack_queue
 
 import (
 	"container/list"

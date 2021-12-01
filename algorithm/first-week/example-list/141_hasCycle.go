@@ -1,4 +1,4 @@
-package example
+package example_list
 
 func hasCycle(head *ListNode) bool {
 	if head == nil || head.Next == nil {

@@ -1,4 +1,4 @@
-package example
+package example_array
 
 import "fmt"
 
