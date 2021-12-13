@@ -10,19 +10,19 @@ import "geek-study/algorithm/common"
  * }
  */
 func mergeTwoLists(l1 *common.ListNode, l2 *common.ListNode) *common.ListNode {
-	var l = common.NewListNode(0, nil)
+	l := &common.ListNode{Val: 0, Next: nil}
+	res := l
 	for l1 != nil || l2 != nil {
-		if l1 == nil || l1.Val > l2.Val {
+		if l1 == nil || (l2 != nil && l1.Val >= l2.Val) {
 			l.Next = l2
 			l2 = l2.Next
-		}
-		if l2 == nil || l1.val < l2.val {
-			l.Next == l1
+		} else if l2 == nil || (l1 != nil && l2.Val > l1.Val) {
+			l.Next = l1
 			l1 = l1.Next
 		}
+		l = l.Next
 	}
-	common.PrintListNode(l)
-	return l
+	return res.Next
 }
 
 func testMergeTwoLists() {
