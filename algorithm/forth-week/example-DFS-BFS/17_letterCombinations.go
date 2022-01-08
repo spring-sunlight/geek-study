@@ -43,5 +43,4 @@ func letterCombinations(digits string) []string {
 func main() {
 	digits := "23"
 	fmt.Println(letterCombinations(digits))
-	fmt.Println(letterCombinations(digits))
 }
