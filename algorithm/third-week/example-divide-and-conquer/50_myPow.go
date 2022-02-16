@@ -1,7 +1,5 @@
 package example_divide_and_conquer
 
-import "fmt"
-
 func myPow(x float64, n int) float64 {
 	if n < 0 {
 		return 1 / myPow(x, -n)
@@ -21,7 +19,7 @@ func myPow(x float64, n int) float64 {
 	return ans
 }
 
-func main() {
-	x := float64(2)
-	fmt.Println(myPow(x, 10))
-}
+//func main() {
+//	x := float64(2)
+//	fmt.Println(myPow(x, 10))
+//}
